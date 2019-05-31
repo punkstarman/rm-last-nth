@@ -1,0 +1,40 @@
+name: rm-last-nth
+version: 0.1.0.0
+license: CC-BY-SA-4.0
+author: "William RM Bartlett"
+maintainer: "bartlettstarman@gmail.com"
+copyright: "William RM Bartlett"
+
+extra-source-files:
+- README.md
+
+description: See README.md
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  rm-last-nth:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - rm-last-nth
+
+tests:
+  rm-last-nth-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - rm-last-nth
+    - hspec
