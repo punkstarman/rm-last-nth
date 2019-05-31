@@ -40,7 +40,7 @@ The program outputs all lines from input except for the last `n`th.
 It takes a single argument which specifies `n`.
 
 ```shell
-stack run -- 4
+stack run -- 3
 ```
 
 Example input:
@@ -50,9 +50,8 @@ with confidential information
 on one of the lines.
 SUPER SECRET: 1234
 Haskell evaluation is lazy
-which makes it easy to
-stream processing of this
-kind of file.
+which makes stream processing
+of this kind of file easy.
 ```
 
 Example ouput:
@@ -61,7 +60,6 @@ This is a really long document
 with confidential information
 on one of the lines.
 Haskell evaluation is lazy
-which makes it easy to
-stream processing of this
-kind of file.
+which makes stream processing
+of this kind of file easy.
 ```

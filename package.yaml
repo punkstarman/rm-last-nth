@@ -15,6 +15,8 @@ dependencies:
 
 library:
   source-dirs: src
+  ghc-options:
+  - -fno-warn-tabs
 
 executables:
   rm-last-nth:
@@ -24,6 +26,7 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -fno-warn-tabs
     dependencies:
     - rm-last-nth
 
@@ -35,6 +38,7 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -fno-warn-tabs
     dependencies:
     - rm-last-nth
     - hspec
