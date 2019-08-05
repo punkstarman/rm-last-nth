@@ -23,10 +23,18 @@ executables:
     main: Main.hs
     source-dirs: app
     ghc-options:
+    - -Wall
+    - "-O2"
+    - -static
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     - -fno-warn-tabs
+    cc-options:
+    - -static
+    ld-options:
+    - -static
+    - -pthread
     dependencies:
     - rm-last-nth
 

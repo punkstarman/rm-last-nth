@@ -4,7 +4,7 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 72c8a99b3be9828577973935f4b6d39eacc5a1acce4c6c55b35bea5b63ca061c
+-- hash: 2b14151dd0d45ca0d1a5d5e681b277a8a32b8c6ca5032111388dcc688848e02a
 
 name:           rm-last-nth
 version:        0.1.0.0
@@ -35,7 +35,9 @@ executable rm-last-nth
       Paths_rm_last_nth
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -fno-warn-tabs
+  ghc-options: -Wall -O2 -static -threaded -rtsopts -with-rtsopts=-N -fno-warn-tabs
+  cc-options: -static
+  ld-options: -static -pthread
   build-depends:
       base >=4.7 && <5
     , rm-last-nth
